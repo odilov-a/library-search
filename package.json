@@ -1,0 +1,15 @@
+{
+  "name": "electron-express-app",
+  "version": "1.0.0",
+  "description": "Electron.js combined app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Akbar Odilov",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^16.0.0"
+  }
+}

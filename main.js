@@ -16,6 +16,11 @@ function createWindow() {
     mainWindow = null;
   });
   mainWindow.setMenu(null);
+
+  globalShortcut.register("CommandOrControl+R", () => {
+    mainWindow.reload();
+  });
+
   globalShortcut.register("CommandOrControl+F", () => {
     mainWindow.setFullScreen(!mainWindow.isFullScreen());
   });

@@ -1,15 +1,37 @@
 {
   "name": "electron-express-app",
   "version": "1.0.0",
-  "description": "Electron.js combined app",
+  "description": "library advanced search",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
   "keywords": [],
   "author": "Akbar Odilov",
   "license": "ISC",
-  "dependencies": {
-    "electron": "^16.0.0"
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^16.0.0",
+    "electron-builder": "^22.14.7"
+  },
+  "build": {
+    "appId": "com.example.electron-express-app",
+    "productName": "Library Advanced Search",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "./logo.png"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "./logo.png"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "./logo.png"
+    }
   }
 }

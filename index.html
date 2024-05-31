@@ -161,9 +161,9 @@
     };
 
     const populateSelects = async () => {
-      const categoryUrl = "http://localhost:3333/api/categories";
-      const authorUrl = "http://localhost:3333/api/authors";
-      const publisherUrl = "http://localhost:3333/api/publishers";
+      const categoryUrl = "http://localhost:3003/api/categories";
+      const authorUrl = "http://localhost:3003/api/authors";
+      const publisherUrl = "http://localhost:3003/api/publishers";
       const categoryOptions = await fetchOptions(categoryUrl);
       const authorOptions = await fetchOptions(authorUrl);
       const publisherOptions = await fetchOptions(publisherUrl);
@@ -180,7 +180,7 @@
       const year = document.getElementById("year").value;
       const startYear = document.getElementById("startYear").value;
       const endYear = document.getElementById("endYear").value;
-      const url = `http://localhost:3333/api/books/search?title=${title}&author=${author}&category=${category}&publisher=${publisher}&year=${year}&startYear=${startYear}&endYear=${endYear}`;
+      const url = `http://localhost:3003/api/books/search?title=${title}&author=${author}&category=${category}&publisher=${publisher}&year=${year}&startYear=${startYear}&endYear=${endYear}`;
       try {
         const response = await fetch(url);
         if (!response.ok) {
